@@ -64,7 +64,7 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: 85908515d1f30749e318                      #生成的clientID
   clientSecret: 61e99643e6d63b979f929f715b1dcfaab95a7f16    #生成的clientSecret
-  repo: eric-xin.github.io    #仓库名称
+  repo: Comment    #仓库名称
   owner: eric-xin    #github用户名
   admin: [eric-xin,eric-haha,eric-hello]
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
