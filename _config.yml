@@ -23,7 +23,7 @@ zhihu_username:     haha
 github_username:    eric-xin
 facebook_username:  Eric Xin
 jianshu_username:   haha
-#twitter_username:   qiubaiying
+twitter_username:   Eric.x
 
 
 
@@ -61,12 +61,12 @@ disqus_username: Eric.x
 
 # Gitalk
 gitalk:
-  enable: false    #是否开启Gitalk评论
+  enable: true    #是否开启Gitalk评论
   clientID: f2c84e7629bb1446c1a4                            #生成的clientID
   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
-  repo: qiubaiying.github.io    #仓库名称
+  repo: eric-xin.github    #仓库名称
   owner: eric-xin    #github用户名
-  admin: eric-xin
+  admin: [eric-xin,eric-haha,eric-hello]
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
