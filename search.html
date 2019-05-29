@@ -38,6 +38,10 @@ title: Search
     {% for post in site.posts %}
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
+        "author": "{{ post.author | xml_escape }}",
+        "categories": "{{ post.categories}}",
+        "content": {{ post.content | strip_html | strip_new_lines | smartify | truncate: 200 | jsonify }},
+        "url": "{{ post.url | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
