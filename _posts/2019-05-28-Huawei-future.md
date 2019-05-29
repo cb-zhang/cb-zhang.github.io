@@ -5,7 +5,7 @@ subtitle:   "what's more"
 categories : [huawei,tech]
 date:       2019-05-25
 author:     "Eric.x"
-header-img: /img/huawei-america.jpg
+header-img: /img/post-huawei-america.jpg
 catalog: true
 tags:
     - Huawei
