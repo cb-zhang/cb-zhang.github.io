@@ -2,8 +2,11 @@
 layout: page 
 title : Archives
 description: "文章归档"
-header-img: "/img/archives.jpg"
 ---
+
+<style type="text/css">
+    header.intro-header{background-color:#00ff00;}
+</style>
 
 	{% for post in site.posts  %}
 		{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
