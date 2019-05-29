@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Huawei--Well or not
-subtitle:   "what's future"
+title: Huawei-future
+subtitle:   "what's more"
 categories : [tech]
 date:       2019-05-25
 author:     "Eric.x"
