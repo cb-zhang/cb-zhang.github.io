@@ -4,6 +4,7 @@ title:      Huawei--Well or not
 subtitle:   Whats new
 date:       2019-05-28
 author:     Eric.x
+categories : [huawei,tech]
 header-img: img/post-huawei.jpeg
 catalog: true
 tags:
