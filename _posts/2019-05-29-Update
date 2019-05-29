@@ -1,0 +1,166 @@
+---
+layout: post
+title: UpDate
+subtitle:   "Search,Categories,Archives"
+categories : [huawei,tech]
+date:       2019-05-25
+author:     "Eric.x"
+header-img: /img/huawei-america.jpg
+catalog: true
+tags:
+    - Update
+---
+# Search--
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{background-color: #4285f4;}
+</style>
+
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>{{ page.title }}</h1>
+                    <span class="subheading">{{ page.description }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <!-- Post Container -->
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+    
+<form action="/search" method="get">
+  <label for="search-box"></label>
+  <input type="text" id="search-box" name="query" placeholder="Only Support English">
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  window.store = {
+    {% for post in site.posts %}
+      "{{ post.url | slugify }}": {
+        "title": "{{ post.title | xml_escape }}",
+        "author": "{{ post.author | xml_escape }}",
+        "categories": "{{ post.categories}}",
+        "content": {{ post.content | strip_html | strip_new_lines | smartify | truncate: 200 | jsonify }},
+        "url": "{{ post.url | xml_escape }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+</script>
+
+<script src="/lunr.min.js"></script>
+
+<script src="/search.js"></script>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+# Categories
+
+<header class="intro-header" style="background-image: url('{{ site.BASE_PATH }}{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <!--<hr class="small">-->
+                    <span class="subheading">{{ page.description }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="col-sm-2 col-sm-offset-2 col-xs-5">
+    <ul class="nav nav-tabs-vertical">
+      {% assign categories_list = site.categories %}
+      {% if categories_list.first[0] == null %}
+        {% for category in categories_list %}
+            <li>
+                <a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}-ref" data-toggle="tab">
+                  {{ category | capitalize }} <span class="badge pull-right">{{ site.categories[category].size }}</span>
+               </a>
+            </li>
+        {% endfor %}
+      {% else %}
+        {% for category in categories_list %}
+            <li>
+                <a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}-ref" data-toggle="tab">
+                    {{ category[0] | capitalize }} <span class="badge pull-right">{{ category[1].size }}</span>
+                </a>
+            </li>
+        {% endfor %}
+      {% endif %}
+      {% assign categories_list = nil %}
+    </ul>
+</div>
+
+<!-- Tab panes -->
+
+<div class="tab-content col-sm-8 col-xs-7">
+  {% for category in site.categories %}
+    <div class="tab-pane" id="{{ category[0] | replace:' ','-' }}-ref">
+      <h3 style="margin-top: 0px">Posts in {{ category[0] | capitalize }}</h3>
+      <ul class="list-unstyled">
+        {% assign pages_list = category[1] %}
+        {% for node in pages_list %}
+          {% if node.title != null %}
+            {% if group == null or group == node.group %}
+              <li><a href="{{ site.BASE_PATH }}{{node.url}}">{{node.title}}</a> <span class="text-muted"> &raquo;  {{ node.date | date: "%F" }}</span></li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% assign pages_list = nil %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="clearfix"></div>
+
+# Archives
+	{% for post in site.posts  %}
+		{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+		{% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+		{% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+		{% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
+	
+		{% if forloop.first %}
+		<legend id="{{this_year}}-{{this_month}}">{{this_year}} {{this_month}}</legend>
+		<ul>
+		{% endif %}
+	
+		<li><span>{{ post.date | date: "%F" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+	
+		{% if forloop.last %}
+		</ul>
+		{% else %}
+		{% if this_year != next_year %}
+			</ul>
+
+			<legend id="{{next_year}}-{{next_month}}">{{next_year}} {{next_month}}</legend>
+			<ul>
+		{% else %}    
+			{% if this_month != next_month %}
+			</ul>
+			<legend id="{{next_year}}-{{next_month}}">{{next_year}} {{next_month}}</legend>
+			<ul>
+			{% endif %}
+			{% endif %}
+		{% endif %}
+	{% endfor%}
+	{% assign posts_collate = nil %}
+
+
