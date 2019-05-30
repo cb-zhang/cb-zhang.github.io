@@ -3,7 +3,7 @@ layout: post
 title: IEEE排斥华为
 subtitle:   "美国对华为伸出的“黑手”，先是波及了一大批企业，现在竟延伸至学术界。"
 categories : [huawei,tech]
-date:       2019-05-25
+date:       2019-05-30
 author:     "Eric.x"
 header-img: /img/post-ieee.jpg
 catalog: true
