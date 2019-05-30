@@ -1,15 +1,14 @@
 ---
 layout: post
-title: 学术组织IEEE排斥华为
-subtitle:   "北大清华学者当即抗议"
+title: Huawei-future
+subtitle:   "what's more"
 categories : [huawei,tech]
 date:       2019-05-25
 author:     "Eric.x"
-header-img: /img/post-ieee.jpg
+header-img: /img/post-huawei-america.jpg
 catalog: true
 tags:
     - Huawei
-    -IEEE
 ---
 
 美国对华为伸出的“黑手”，先是波及了一大批企业，现在竟延伸至学术界!
