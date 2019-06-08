@@ -1,13 +1,13 @@
 # Site settings
-title: Eric.x's Blog
-SEOTitle: Eric.x's Blog | My Blog
+title: COOLBOY·Zhang's Blog
+SEOTitle: COOLBOY·Zhang's Blog | CB Blog
 header-img: img/hehehe.jpg
-email: doreanmon@yahoo.com
+email: coolboyzhang@outlook.com
 description: "Every failure is leading towards success."
-keyword: "My, My Blog, Eric.x's Blog, Eric.x, Eric.x, iOS, Apple, iPhone"
-url: "http://eric-xin.github.io"          # your host, for absolute URL
+keyword: "VIRUS"
+url: "http://cb-zhang.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/Eric-xin/eric-xin.github.io" # you code repository
+github_repo: "https://github.com/cb-zhang/cb-zhang.github.io" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -18,12 +18,6 @@ sidebar-avatar: /img/me.jpg      # use absolute URL, seeing it's used in both `/
 
 # SNS settings
 RSS: false
-# weibo_username:     qiubaiying
-zhihu_username:     haha
-github_username:    eric-xin
-facebook_username:  Eric Xin
-jianshu_username:   haha
-twitter_username:   Eric.x
 
 
 
@@ -57,16 +51,15 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-disqus_username: Eric.x
+disqus_username: cb-zhang
 
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: 85908515d1f30749e318                      #生成的clientID
   clientSecret: 61e99643e6d63b979f929f715b1dcfaab95a7f16    #生成的clientSecret
-  repo: eric-xin.github.io   #仓库名称
-  owner: eric-xin    #github用户名
-  admin: [eric-xin,eric-haha,eric-hello]
+  repo: cb-zhang.github.io   #仓库名称
+  owner: cb-zhang    #github用户名
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
@@ -102,19 +95,8 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WY",
-        href: "http://zhengwuyang.com"
-    },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
-    },{
-        title: "Apple",
-        href: "https://apple.com"
-    },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
-    },{
+       
         title: "Eric.x",
-        href: "http://eric-hello.github.io"
+        href: "http://eric-xin.github.io"
     }
 ]
